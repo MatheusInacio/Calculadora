@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<script type="text/javascript">
+		function botao(num) {
+			var salvo = document.calc.visor.value;
+			document.calc.visor.value = salvo + num;
+ 		}
+		function resultado() {
+			var salvo = eval(document.calc.visor.value);
+			document.calc.visor.value = salvo;			
+		}
+	</script>
+</head>
+<body>
+<h1>Calculadora</h1>
+<form name="calc">
+	<input type="text" name="visor" id="visor" size="10">
+	<br>
+	<input type="button"  value="7" onclick="botao(value);">
+	<input type="button"  value="8" onclick="botao(value);">
+	<input type="button"  value="9" onclick="botao(value);">
+	<input type="button"  value="/" onclick="botao(value);">
+	<br><br>
+
+	<input type="button" value="4" onclick="botao(value);">
+	<input type="button" value="5" onclick="botao(value);">
+	<input type="button" value="6" onclick="botao(value);">
+	<input type="button" value="*" onclick="botao(value);">
+	<br><br>
+
+	<input type="button" value="1" onclick="botao(value);">
+	<input type="button" value="2" onclick="botao(value);">
+	<input type="button" value="3" onclick="botao(value);">
+	<input type="button" value="-" onclick="botao(value);">
+	<br><br>
+
+	<input type="button" value="0" onclick="botao(value);">
+	<input type="reset"  value="C" >
+	<input type="button" value="=" onclick="resultado();">
+	<input type="button" value="+" onclick="botao(value)";>
+	<br>
+</form>
+</body>
+</html>
